@@ -77,3 +77,23 @@ class ExerciseNotFoundError(ApiError):
 class ProductAlreadyExists(ApiError):
     code = 412
     description = "Product or Service already exists"
+
+class InvaliDeportistaError(ApiError):
+    code = 412
+    description = "Invalid deportista"
+
+class CitaAlreadyExists(ApiError):
+    code = 412
+    description = "Cita already exists for Sportman"
+
+class InvalidNameSocioError(ApiError):
+    code = 412
+    description = "Invalid name for Socio"
+
+class SocioAlreadyExists(ApiError):
+    code = 412
+    description = "Socio already exists"
+
+class SocioNotFoundError(ApiError):
+    code = 404
+    description = "Socio does not exist"
