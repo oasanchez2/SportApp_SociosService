@@ -14,7 +14,7 @@ class CreateSocio(BaseCommannd):
   def execute(self):
     try:
 
-      posted_socio = SocioModel(self.data["id_usuario"], self.data["nombre"], self.data["apellido"],self.data["especialidad"] ,self.data["genero"],
+      posted_socio = SocioModel(self.data["id_usuario"], self.data["nombre"], self.data["apellido"],self.data["especialidad"] ,self.data["anios_experiencia"],self.data["genero"],
                                             self.data['telefono'], self.data['tipo_identificacion'], self.data['numero_identificacion'], self.data['numero_tarjeta_profesional'],
                                             self.data['pais_recidencia'], self.data['ciudad_recidencia'], self.data['organizador'], datetime.now())
       
