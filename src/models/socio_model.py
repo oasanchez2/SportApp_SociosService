@@ -25,6 +25,7 @@ class SocioModel:
     nombre: str
     apellido: str    
     especialidad: Especialidad
+    anios_experiencia: int
     genero: Genero
     telefono: str
     tipo_identificacion: TipoIdentificacion
