@@ -68,6 +68,7 @@ class DynamoDbSocio(DynamoDbInterface):
             'nombre': {'S': socio.nombre },
             'apellido': {'S': socio.apellido },
             'especialidad': {'S': socio.especialidad },
+            'anio_experiencia': {'N': str(socio.anio_experiencia) }, # 'N' es el tipo de dato 'Number
             'genero': {'S': socio.genero },
             'telefono': {'S': socio.telefono },
             'tipo_identificacion': {'S': socio.tipo_identificacion },
@@ -104,6 +105,7 @@ class DynamoDbSocio(DynamoDbInterface):
         nombre = item['nombre']['S']
         apellido = item['apellido']['S']        
         especialidad = item['especialidad']['S']
+        anio_experiencia = item['anio_experiencia']['N']
         genero = item['genero']['S']
         telefono = item['telefono']['S']
         tipo_identificacion = item['tipo_identificacion']['S']
@@ -115,7 +117,7 @@ class DynamoDbSocio(DynamoDbInterface):
         fecha_creacion = item['fecha_creacion']['S']
 
         # Crea una instancia de la clase Entrenamiento
-        socio = SocioModel(id_usuario,nombre,apellido,especialidad,genero,telefono,tipo_identificacion,numero_identificacion,
+        socio = SocioModel(id_usuario,nombre,apellido,especialidad,anio_experiencia,genero,telefono,tipo_identificacion,numero_identificacion,
                             numero_tarjeta_profesional,pais_recidencia,ciudad_recidencia, organizador, fecha_creacion)
 
         return socio
@@ -144,6 +146,7 @@ class DynamoDbSocio(DynamoDbInterface):
             nombre = item['nombre']['S']
             apellido = item['apellido']['S']        
             especialidad = item['especialidad']['S']
+            anio_experiencia = item['anio_experiencia']['N']
             genero = item['genero']['S']
             telefono = item['telefono']['S']
             tipo_identificacion = item['tipo_identificacion']['S']
@@ -154,7 +157,7 @@ class DynamoDbSocio(DynamoDbInterface):
             organizador = item['organizador']['BOOL']
             fecha_creacion = item['fecha_creacion']['S']
         
-            socio = SocioModel(id_usuario,nombre,apellido,especialidad,genero,telefono,tipo_identificacion,numero_identificacion,
+            socio = SocioModel(id_usuario,nombre,apellido,especialidad,anio_experiencia,genero,telefono,tipo_identificacion,numero_identificacion,
                             numero_tarjeta_profesional,pais_recidencia,ciudad_recidencia, organizador, fecha_creacion)
             resultados.append(socio)
         
