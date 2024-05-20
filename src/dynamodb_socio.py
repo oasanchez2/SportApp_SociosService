@@ -68,7 +68,7 @@ class DynamoDbSocio(DynamoDbInterface):
             'nombre': {'S': socio.nombre },
             'apellido': {'S': socio.apellido },
             'especialidad': {'S': socio.especialidad },
-            'anio_experiencia': {'N': str(socio.anio_experiencia) }, # 'N' es el tipo de dato 'Number
+            'anio_experiencia': {'N': str(socio.anios_experiencia) }, # 'N' es el tipo de dato 'Number
             'genero': {'S': socio.genero },
             'telefono': {'S': socio.telefono },
             'tipo_identificacion': {'S': socio.tipo_identificacion },
